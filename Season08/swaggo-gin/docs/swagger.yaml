@@ -1,0 +1,25 @@
+basePath: /
+host: 127.0.0.1:8000
+info:
+  contact: {}
+  description: this is description
+  title: HealthCheck API
+  version: "0.1"
+paths:
+  /health:
+    get:
+      consumes:
+      - '*/*'
+      description: create Order include detail item
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Create order
+      tags:
+      - root
+swagger: "2.0"

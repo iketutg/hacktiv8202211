@@ -1,0 +1,37 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "this is description",
+        "title": "HealthCheck API",
+        "contact": {},
+        "version": "0.1"
+    },
+    "host": "127.0.0.1:8000",
+    "basePath": "/",
+    "paths": {
+        "/health": {
+            "get": {
+                "description": "create Order include detail item",
+                "consumes": [
+                    "*/*"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "root"
+                ],
+                "summary": "Create order",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "object",
+                            "additionalProperties": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

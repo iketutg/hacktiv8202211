@@ -1,0 +1,78 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "this is description",
+        "title": "Orders API",
+        "contact": {},
+        "version": "0.1"
+    },
+    "host": "127.0.0.1:8000",
+    "basePath": "/",
+    "paths": {
+        "/order": {
+            "post": {
+                "description": "create Order include detail item",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "root"
+                ],
+                "summary": "Create order",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/main.Order"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "main.Item": {
+            "type": "object",
+            "properties": {
+                "description": {
+                    "type": "string"
+                },
+                "item_code": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "quantity": {
+                    "type": "integer"
+                }
+            }
+        },
+        "main.Order": {
+            "type": "object",
+            "properties": {
+                "customer_name": {
+                    "type": "string"
+                },
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/main.Item"
+                    }
+                },
+                "order_at": {
+                    "type": "string"
+                },
+                "order_id": {
+                    "type": "integer"
+                }
+            }
+        }
+    }
+}

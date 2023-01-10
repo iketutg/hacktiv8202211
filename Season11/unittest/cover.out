@@ -1,0 +1,4 @@
+mode: set
+unittest/services/product_service.go:13.79,15.20 2 1
+unittest/services/product_service.go:18.2,18.21 1 1
+unittest/services/product_service.go:15.20,17.3 1 0
